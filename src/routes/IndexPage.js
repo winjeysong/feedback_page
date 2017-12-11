@@ -4,6 +4,7 @@ import { Layout } from 'antd';
 import './IndexPage.scss';
 import TopMenuComponent from '../components/TopMenu/TopMenu';
 import LeftNavComponent from '../components/LeftNav/LeftNav';
+import { ContentTip } from '../styled/styled-components';
 
 const { Header, Sider, Content } = Layout;
 
@@ -19,7 +20,7 @@ function IndexPage() {
           <LeftNavComponent />
         </Sider>
         <Layout style={{ padding: '0 24px 24px' }}>
-          <p>意见反馈</p>
+          <ContentTip>意见反馈</ContentTip>
           <Content style={{ background: '#f4f5f7', padding: 24, margin: 0, minHeight: 280 }}>
             内容
           </Content>
