@@ -12,6 +12,7 @@ function TopMenu() {
     <Menu
       defaultSelectedKeys={['1']}
       mode="horizontal"
+      style={{ background: 'none', position: 'absolute', top: 15, left: 150, width: 'max-content', height: '70px', textAlign: 'center', lineHeight: 'normal' }}
     >
       <Menu.Item key="1"><TopItem path={'/推广运营'} iconPath={Pic1} info={'推广运营'} /></Menu.Item>
       <Menu.Item key="2"><TopItem path={'/会员积分'} iconPath={Pic2} info={'会员积分'} /></Menu.Item>
