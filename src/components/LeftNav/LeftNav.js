@@ -1,7 +1,6 @@
 import React from 'react';
 import { Menu } from 'antd';
 import { Link } from 'dva/router';
-import styles from './LeftNav.css';
 
 const SubMenu = Menu.SubMenu;
 
