@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'dva/router';
-import { InfoWrap, TopWrap } from '../../styled/styled-components';
+import { TopItemStyles } from '../../styled/styled-components';
 
+const { TopWrap, InfoWrap } = TopItemStyles;
 const TopItem = ({ path, iconPath, info }) => {
   return (
     <TopWrap>
