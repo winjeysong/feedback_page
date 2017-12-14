@@ -5,9 +5,13 @@ export const ContentTip = styled.p`
   font-size: 16px;
   color: #1c4a70;
   line-height: 16px;
+  position: relative;
+  top: -28px;
+  font-weight: bold;
 `;
 
 export const InfoWrap = styled.span`
+display: block;
 height: max-content;
 line-height: normal;
 position: relative;
@@ -17,4 +21,20 @@ font-size: 14px;
 line-height: 14px;
 font-family: sans-serif;
 font-weight: 300;
+`;
+
+// topitem wrapper
+export const TopWrap = styled.div`
+  width: 80px;
+  height: 70px;
+  &:hover {
+    background: #fff;
+  }
+
+  a {
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    left: -2px;
+  }
 `;

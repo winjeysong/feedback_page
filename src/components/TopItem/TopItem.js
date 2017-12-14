@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'dva/router';
-import { InfoWrap } from '../../styled/styled-components';
-import './TopItem.scss';
+import { InfoWrap, TopWrap } from '../../styled/styled-components';
 
 const TopItem = ({ path, iconPath, info }) => {
   return (
-    <span className="top-item">
+    <TopWrap>
       <Link to={path}>
         <img src={iconPath} alt={info} width="33%" height="33%" />
-        <br />
         <InfoWrap>{info}</InfoWrap>
       </Link>
-    </span>
+    </TopWrap>
   );
 };
 
