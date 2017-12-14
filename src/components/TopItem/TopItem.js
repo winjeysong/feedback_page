@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'dva/router';
 import { InfoWrap, TopWrap } from '../../styled/styled-components';
+import './TopItem.less';
 
 const TopItem = ({ path, iconPath, info }) => {
   return (
