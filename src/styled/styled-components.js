@@ -11,16 +11,15 @@ export const ContentTip = styled.p`
 `;
 
 export const InfoWrap = styled.span`
-display: block;
-height: max-content;
-line-height: normal;
-position: relative;
-top: 1px;
-opacity: 0.8;
-font-size: 14px;
-line-height: 14px;
-font-family: sans-serif;
-font-weight: 300;
+  display: block;
+  position: relative;
+  top: 5px;
+  color: #fff;
+  opacity: 0.8;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: sans-serif;
+  font-weight: 300;
 `;
 
 // topitem wrapper
@@ -33,8 +32,9 @@ export const TopWrap = styled.div`
 
   a {
     display: inline-block;
-    position: relative;
-    top: 15px;
-    left: -2px;
+    padding: 15px 12px 22px;
+    &:hover > span {
+      color: #fe6900;
+    }
   }
 `;
