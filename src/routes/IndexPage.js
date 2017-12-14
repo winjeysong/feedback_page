@@ -16,7 +16,7 @@ function IndexPage() {
         <TopMenuComponent />
       </Header>
       <Layout>
-        <Sider style={{ background: '#fff', width: 200 }}>
+        <Sider style={{ background: '#fff', width: 200, boxShadow: '3px 0 3px #e5e5e5' }}>
           <LeftNavComponent />
         </Sider>
         <Layout style={{ background: '#f4f5f7', padding: '56px 26px 100px 26px' }}>
