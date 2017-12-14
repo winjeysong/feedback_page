@@ -2,7 +2,7 @@
   "entry": "src/index.js",
   "theme": "./src/theme.js",
   "cssModulesExclude": [
-    "./src/components/TopItem/TopItem.less"
+    "./src/styled/menu.less"
   ],
   "env": {
     "development": {

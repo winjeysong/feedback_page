@@ -1,0 +1,34 @@
+/**
+ * @customize this style from antd-menu.
+ */
+
+@import "~antd/lib/menu/style/index.less";
+
+.@{menu-prefix-cls} {
+    &-horizontal {
+      > .@{menu-prefix-cls}-item,
+      > .@{menu-prefix-cls}-submenu {
+        &:hover,
+        &-active,
+        &-open,
+        &-selected {
+          border-bottom: 0 solid transparent;
+          color: transparent;
+        }
+      }
+    }
+
+  &-vertical,
+  &-inline {
+    .@{menu-prefix-cls}-item,
+    .@{menu-prefix-cls}-submenu-title {
+      padding: 0 16px;
+      font-size: @font-size-base;
+      line-height: 55px;
+      height: 55px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
