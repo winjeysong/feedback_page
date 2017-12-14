@@ -12,8 +12,10 @@ export const ContentTip = styled.p`
 
 export const InfoWrap = styled.span`
   display: block;
-  position: relative;
-  top: 5px;
+  width: max-content;
+  position: absolute;
+  top: 40px;
+  left: 32px;
   color: #fff;
   opacity: 0.8;
   font-size: 14px;
@@ -32,7 +34,9 @@ export const TopWrap = styled.div`
 
   a {
     display: inline-block;
-    padding: 15px 12px 22px;
+    width: 80px;
+    height: 70px;
+    padding: 15px 0;
     &:hover > span {
       color: #fe6900;
     }

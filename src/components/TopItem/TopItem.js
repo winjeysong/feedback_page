@@ -7,7 +7,7 @@ const TopItem = ({ path, iconPath, info }) => {
   return (
     <TopWrap>
       <Link to={path}>
-        <img src={iconPath} alt={info} width="33.3%" height="33.3%" />
+        <img src={iconPath} alt={info} />
         <InfoWrap>{info}</InfoWrap>
       </Link>
     </TopWrap>
