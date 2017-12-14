@@ -7,7 +7,6 @@ const SubMenu = Menu.SubMenu;
 function LeftNav() {
   return (
     <Menu
-      style={{ width: 200, height: 55 }}
       defaultSelectedKeys={['6']}
       defaultOpenKeys={['sub6']}
       mode="inline"
