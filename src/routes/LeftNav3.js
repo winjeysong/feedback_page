@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'dva';
-import styles from './LeftNav3.css';
+import MainLayout from '../components/MainLayout/MainLayout';
 
-function LeftNav3() {
+function LeftNav3({ location }) {
+  const tip = '优惠管理';
+  const content = <h1>推广运营页面</h1>;
   return (
-    <div className={styles.normal}>
-      优惠管理
-    </div>
+    <MainLayout location={location} content={content} tip={tip} />
   );
 }
 
