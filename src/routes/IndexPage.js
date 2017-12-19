@@ -2,29 +2,22 @@ import React from 'react';
 import { connect } from 'dva';
 import { Layout } from 'antd';
 import TopMenuComponent from '../components/TopMenu/TopMenu';
-import LeftNavComponent from '../components/LeftNav/LeftNav';
-import { ContentTip } from '../styled/styled-components';
+// import DataRange from '../components/DateRange/DateRange';
 import '../styled/menu.less';
 
-const { Header, Sider, Content } = Layout;
+const { Header, Content } = Layout;
 
-function IndexPage() {
+function IndexPage({ location }) {
   return (
     <Layout>
       <Header className="header" style={{ height: 70, width: '100%', background: '#182a3a' }}>
         <span className="logo">logo</span>
-        <TopMenuComponent />
+        <TopMenuComponent location={location} />
       </Header>
-      <Layout>
-        <Sider style={{ background: '#fff', width: 200, boxShadow: '3px 0 3px #e5e5e5' }}>
-          <LeftNavComponent />
-        </Sider>
-        <Layout style={{ background: '#f4f5f7', padding: '56px 26px 100px 26px' }}>
-          <ContentTip>意见反馈</ContentTip>
-          <Content style={{ padding: 24, margin: 0, minHeight: 280 }}>
-            内容
-          </Content>
-        </Layout>
+      <Layout style={{ background: '#f4f5f7', padding: '56px 26px 100px 26px' }}>
+        <Content style={{ padding: 24, margin: 0, minHeight: 280 }}>
+          <h1>这是主页</h1>
+        </Content>
       </Layout>
     </Layout>
   );
