@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import logoimg from '../assets/C510FF9D-0B61-4C68-99FD-89F3657B4EE0@1x.png';
 
 // global variables
 const primaryColor = '#fff';
@@ -65,3 +66,30 @@ export const TopItemStyles = {
   TopWrap: TopItemStyle.TopWrap(),
   InfoWrap: TopItemStyle.InfoWrap(),
 };
+
+// page logo
+export const Logo = styled.span`
+  color: ${primaryColor};
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  position: absolute;
+  top: 21px;
+  left: 24px;
+
+  span {
+    display: inline-block;
+    width: max-content;
+    padding-left: 10px;
+    position: absolute;
+    top: 4px;
+  }
+
+  &:before {
+    display: inline-block;
+    content: "";
+    background: url(${logoimg}) no-repeat;
+    width: 39px;
+    height: 28px;
+  }
+`;
