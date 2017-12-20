@@ -1,0 +1,16 @@
+/**
+ * @customize this style from antd-date-picker.
+ */
+
+ @import "~antd/lib/date-picker/style/index.less";
+
+ .@{calendar-prefix-cls}-picker {
+  &-icon {
+    &:after {
+      content: "\e606";
+      transform: scale(0.667,0.667);
+      color: #999999;
+    }
+  }
+ }
+ 

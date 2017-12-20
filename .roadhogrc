@@ -2,7 +2,8 @@
   "entry": "src/index.js",
   "theme": "./src/theme.js",
   "cssModulesExclude": [
-    "./src/styled/menu.less"
+    "./src/styled/menu.less",
+    "./src/styled/date-picker.less"
   ],
   "autoprefixer": {
     "browsers": [
