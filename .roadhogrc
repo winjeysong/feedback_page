@@ -3,7 +3,8 @@
   "theme": "./src/theme.js",
   "cssModulesExclude": [
     "./src/styled/menu.less",
-    "./src/styled/date-picker.less"
+    "./src/styled/date-picker.less",
+    "./src/styled/select.less"
   ],
   "autoprefixer": {
     "browsers": [

@@ -1,0 +1,16 @@
+/**
+ * @customize this style from antd-select.
+ */
+
+ @import "~antd/lib/select/style/index.less";
+
+ .@{select-prefix-cls} {
+  &-arrow {
+    &:before {
+      content: "\e606";
+      transform: scale(8/9, 8/9);
+      color: #999999;
+    }
+  }
+ }
+ 
