@@ -9,7 +9,7 @@ import Pic4 from '../../assets/AD8F6B3B-9993-462D-9F52-BF3EAE237C72@1x.png';
 function TopMenu({ location }) {
   return (
     <Menu
-      defaultSelectedKeys={['1']}
+      defaultSelectedKeys={['/推广运营']}
       selectedKeys={[location.pathname]}
       mode="horizontal"
       style={{ background: 'none', position: 'absolute', top: 0, left: 205, width: 'max-content', height: '70px', textAlign: 'center', lineHeight: 'normal', borderBottom: 'none' }}
