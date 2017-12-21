@@ -93,3 +93,21 @@ export const Logo = styled.span`
     height: 28px;
   }
 `;
+
+// content wrapper
+const ContentWrapStyle = {
+  isCenter: (props) => { return props.center ? 'center' : null; },
+
+  ContentWrap() {
+    return styled.div`
+    padding: 20px 15px 0; 
+    background: ${primaryColor};
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 0 4px 0 rgba(207,207,207,0.6);
+    border-radius: 6px;
+    text-align: ${this.isCenter};
+  `;
+  },
+};
+
+export const ContentWrap = ContentWrapStyle.ContentWrap();
