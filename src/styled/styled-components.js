@@ -12,7 +12,7 @@ export const ContentTip = styled.p`
   line-height: 16px;
   position: relative;
   top: -28px;
-  font-weight: bold;
+  font-weight: 400;
 `;
 
 // topitem wrapper
@@ -100,6 +100,7 @@ const ContentWrapStyle = {
 
   ContentWrap() {
     return styled.div`
+    margin: 0 0 12px;
     padding: 20px 15px 0; 
     background: ${primaryColor};
     border: 1px solid #e5e5e5;
