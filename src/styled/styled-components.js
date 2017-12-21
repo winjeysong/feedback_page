@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Menu } from 'antd';
 import logoimg from '../assets/C510FF9D-0B61-4C68-99FD-89F3657B4EE0@1x.png';
 
 // global variables
@@ -100,15 +101,29 @@ const ContentWrapStyle = {
 
   ContentWrap() {
     return styled.div`
-    margin: 0 0 12px;
-    padding: 20px 15px 0; 
-    background: ${primaryColor};
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 0 4px 0 rgba(207,207,207,0.6);
-    border-radius: 6px;
-    text-align: ${this.isCenter};
-  `;
+      margin: 0 0 12px;
+      padding: 20px 15px 0; 
+      background: ${primaryColor};
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 0 4px 0 rgba(207,207,207,0.6);
+      border-radius: 6px;
+      text-align: ${this.isCenter};
+    `;
   },
 };
 
 export const ContentWrap = ContentWrapStyle.ContentWrap();
+
+// custom menu for ContentTab
+export const CustomMenu = styled(Menu)`
+  color: #666;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0 !important;
+
+  li.ant-menu-item:hover,
+  li.ant-menu-item-active,
+  li.ant-menu-item-selected {
+    color: #0c92ff;
+    border-bottom: 2px solid #1496ff;
+  }
+`;
