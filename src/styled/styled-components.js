@@ -119,6 +119,7 @@ export const CustomMenu = styled(Menu)`
   color: #666;
   font-size: 14px;
   border-bottom: 1px solid #e0e0e0 !important;
+  margin-bottom: 8px !important;
 
   li.ant-menu-item:hover,
   li.ant-menu-item-active,
