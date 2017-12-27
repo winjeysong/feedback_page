@@ -4,6 +4,7 @@ import SearchBox from '../../components/SearchBox/SearchBox';
 import ConfigBox from '../../components/ConfigBox/ConfigBox';
 import ContentTab from '../../components/ContentTab/ContentTab';
 import OutputBox from '../../components/OutputBox/OutputBox';
+import FeedbackTable from '../../components/FeedbackTable/FeedbackTable';
 
 
 function MainContent() {
@@ -23,6 +24,11 @@ function MainContent() {
         </Col>
         <Col span={5}>
           <OutputBox />
+        </Col>
+      </Row>
+      <Row>
+        <Col span={24}>
+          <FeedbackTable />
         </Col>
       </Row>
     </div>

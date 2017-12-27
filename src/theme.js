@@ -10,5 +10,8 @@ module.exports = () => {
     // -------- Form
     '@label-color': '#666666',
 
+    // -------- Table
+    '@table-header-bg': '#e0f0ff',
+    '@table-row-hover-bg': '#f3f4f5',
   };
 };

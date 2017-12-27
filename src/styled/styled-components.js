@@ -1,10 +1,15 @@
 import styled from 'styled-components';
-import { Menu } from 'antd';
+import { Menu, Table } from 'antd';
 import logoimg from '../assets/C510FF9D-0B61-4C68-99FD-89F3657B4EE0@1x.png';
 
 // global variables
 const primaryColor = '#fff';
 const highlightColor = '#fe6900';
+const primaryBorderStyle = `
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 0 4px 0 rgba(207,207,207,0.6);
+  border-radius: 6px;
+`;
 
 export const ContentTip = styled.p`
   font-family: sans-serif;
@@ -104,9 +109,7 @@ const ContentWrapStyle = {
       margin: 0 0 12px;
       padding: 20px 15px 0; 
       background: ${primaryColor};
-      border: 1px solid #e5e5e5;
-      box-shadow: 0 0 4px 0 rgba(207,207,207,0.6);
-      border-radius: 6px;
+      ${primaryBorderStyle}
       text-align: ${this.isCenter};
     `;
   },
@@ -127,4 +130,23 @@ export const CustomMenu = styled(Menu)`
     color: #0c92ff;
     border-bottom: 2px solid #1496ff;
   }
+`;
+
+export const CustomTable = styled(Table)`
+  background: ${primaryColor} !important;
+  ${primaryBorderStyle}
+
+
+  thead.ant-table-thead {
+    border: 1px solid #e9ecef;
+
+    > tr > th span {
+      color: #4a93cf;
+      font-size: 12px;
+      font-family: sans-serif;
+      font-weight: 500;
+      text-align: center !important;
+    }
+  }
+
 `;
