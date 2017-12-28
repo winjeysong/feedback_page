@@ -169,6 +169,7 @@ export const CustomTable = styled(Table)`
 
   tbody.ant-table-tbody {
     color: #083050;
+    font-family: sans-serif;
     
     > tr > td {
       text-align: center;
@@ -183,7 +184,9 @@ const UserWrapStyle = {
 
   UserWrap() {
     return styled.div`
-    
+    display: inline-block;
+      width: max-content;
+
       ul.user-info {
         display: inline-block;
         width: max-content;
@@ -215,7 +218,7 @@ const UserWrapStyle = {
         height: 50px;
         position: relative;
         top: 3px;
-        left: -143px;
+        left: -187px;
       }
     `;
   },
