@@ -151,4 +151,11 @@ export const CustomTable = styled(Table)`
       }
     }
   }
+
+  tbody.ant-table-tbody {
+    > tr > td {
+      text-align: center;
+      padding: 15px 8px;
+    }
+  }
 `;
