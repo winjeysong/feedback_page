@@ -6,9 +6,9 @@ function UserInfo({ userInfo }) {
   return (
     <UserWrap avatar={avatar}>
       <ul className="user-info">
-        <li className="name">{name}</li>
-        <li className="tele">{tele}</li>
-        <li className="card">{card}</li>
+        <li className="name">{`昵称：${name}`}</li>
+        <li className="tele">{`手机号：${tele}`}</li>
+        <li className="card">{`卡号：${card}`}</li>
       </ul>
     </UserWrap>
   );
