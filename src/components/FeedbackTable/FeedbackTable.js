@@ -32,6 +32,11 @@ const data = [{
     fbContent: '非常喜欢了',
     fbImg: require('../../assets/9FFF55AE-AFC0-498A-B8AC-51A8EBF1974F@1x.png'),
     fbDate: '2017/10/11 8:21:30',
+    fbRe: {
+      reMsg: '您好，您反馈的问题已经收到，会尽快核实并处理，对您造成的困扰深表歉意。',
+      reStaff: 'mc_ji3423',
+      reDate: '2017/10/11 8:21:30',
+    },
   },
   operation: 'New York No. 1 Lake Park',
 }, {

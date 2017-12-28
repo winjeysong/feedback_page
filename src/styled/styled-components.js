@@ -246,8 +246,17 @@ export const FeedbackWrap = styled.div`
       line-height: 12px;
       padding: 0 0 8px;
 
-      &:last-child {
+      &.fb-date,
+      &.fb-re-staff-date {
         font-size: 10px;
+      }
+
+      &.fb-response {
+        color: #ffb600;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
       }
     }
   }
