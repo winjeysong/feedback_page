@@ -11,6 +11,7 @@ const primaryBorderStyle = `
   box-shadow: 0 0 4px 0 rgba(207,207,207,0.6);
   border-radius: 6px;
 `;
+const tableColor = '#0c92ff';
 
 export const ContentTip = styled.p`
   font-family: sans-serif;
@@ -128,7 +129,7 @@ export const CustomMenu = styled(Menu)`
   li.ant-menu-item:hover,
   li.ant-menu-item-active,
   li.ant-menu-item-selected {
-    color: #0c92ff;
+    color: ${tableColor};
     border-bottom: 2px solid #1496ff;
   }
 `;
@@ -137,6 +138,18 @@ export const CustomMenu = styled(Menu)`
 export const CustomTable = styled(Table)`
   background: ${primaryColor} !important;
   ${primaryBorderStyle}
+
+  .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+  .ant-checkbox:hover .ant-checkbox-inner,
+  .ant-checkbox-input:focus + .ant-checkbox-inner {
+    border-color: ${tableColor};
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner,
+  .ant-checkbox-indeterminate .ant-checkbox-inner {
+    background-color: ${tableColor};
+    border-color: ${tableColor};
+  }
 
   thead.ant-table-thead {
     border: 1px solid #e9ecef;
