@@ -6,12 +6,19 @@ import avatar from '../assets/9985A4D7-77A3-43D5-AAB5-CBB052689812@1x.png';
 // global variables
 const primaryColor = '#fff';
 const highlightColor = '#fe6900';
+const defaultFontSize = '12px';
+const middleFontSize = '14px';
 const primaryBorderStyle = `
   border: 1px solid #e5e5e5;
   box-shadow: 0 0 4px 0 rgba(207,207,207,0.6);
   border-radius: 6px;
 `;
 const tableColor = '#0c92ff';
+const tableListStyle = `
+  text-align: left;
+  font-size: ${defaultFontSize};
+  line-height: 16px;
+`;
 
 export const ContentTip = styled.p`
   font-family: sans-serif;
@@ -62,7 +69,7 @@ const TopItemStyle = {
       left: 32px;
       color: ${this.topItemPrimaryColor};
       opacity: 0.8;
-      font-size: 14px;
+      font-size: ${middleFontSize};
       line-height: 14px;
       font-family: sans-serif;
       font-weight: 300;
@@ -122,7 +129,7 @@ export const ContentWrap = ContentWrapStyle.ContentWrap();
 // custom menu for ContentTab
 export const CustomMenu = styled(Menu)`
   color: #666;
-  font-size: 14px;
+  font-size: ${middleFontSize};
   border-bottom: 1px solid #e0e0e0 !important;
   margin-bottom: 8px !important;
 
@@ -160,7 +167,7 @@ export const CustomTable = styled(Table)`
 
       span {
         color: #4a93cf;
-        font-size: 12px;
+        font-size: ${defaultFontSize};
         font-family: sans-serif;
         font-weight: 500;
       }
@@ -184,7 +191,7 @@ const UserWrapStyle = {
 
   UserWrap() {
     return styled.div`
-    display: inline-block;
+      display: inline-block;
       width: max-content;
 
       ul.user-info {
@@ -192,9 +199,7 @@ const UserWrapStyle = {
         width: max-content;
     
         > li {
-          text-align: left;
-          font-size: 12px;
-          line-height: 16px;
+          ${tableListStyle}
         }
       }
     
