@@ -132,6 +132,7 @@ export const CustomMenu = styled(Menu)`
   }
 `;
 
+// custom table for FeedbackTable
 export const CustomTable = styled(Table)`
   background: ${primaryColor} !important;
   ${primaryBorderStyle}
@@ -153,6 +154,8 @@ export const CustomTable = styled(Table)`
   }
 
   tbody.ant-table-tbody {
+    color: #083050;
+    
     > tr > td {
       text-align: center;
       padding: 15px 8px;
