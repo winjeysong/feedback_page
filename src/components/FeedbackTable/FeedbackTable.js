@@ -1,6 +1,7 @@
 import React from 'react';
 import { CustomTable } from '../../styled/styled-components';
 import UserInfo from '../../components/UserInfo/UserInfo';
+import UserFeedback from '../../components/UserFeedback/UserFeedback';
 
 const columns = [{
   title: '用户',
@@ -9,6 +10,7 @@ const columns = [{
 }, {
   title: '反馈内容',
   dataIndex: 'feedback',
+  render: fb => <UserFeedback userFeedback={fb} />,
 }, {
   title: '标签',
   dataIndex: 'tag',
@@ -23,10 +25,14 @@ const data = [{
     name: '甜甜',
     tele: '18598886652',
     card: '254152547885',
-    avatar: null,
+    avatar: null, // require(avatar path)
   },
   tag: '活动反馈',
-  feedback: 'content',
+  feedback: {
+    fbContent: '非常喜欢了',
+    fbImg: require('../../assets/9FFF55AE-AFC0-498A-B8AC-51A8EBF1974F@1x.png'),
+    fbDate: '2017/10/11 8:21:30',
+  },
   operation: 'New York No. 1 Lake Park',
 }, {
   key: '2',
@@ -37,7 +43,11 @@ const data = [{
     avatar: null,
   },
   tag: '活动反馈',
-  feedback: 'content',
+  feedback: {
+    fbContent: '非常喜欢了',
+    fbImg: require('../../assets/9FFF55AE-AFC0-498A-B8AC-51A8EBF1974F@1x.png'),
+    fbDate: '2017/10/11 8:21:30',
+  },
   operation: 'London No. 1 Lake Park',
 }];
 

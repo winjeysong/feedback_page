@@ -231,3 +231,24 @@ const UserWrapStyle = {
 
 export const UserWrap = UserWrapStyle.UserWrap();
 
+// feedback wrapper for UserFeedback
+export const FeedbackWrap = styled.div`
+  display: inline-block;
+  width: max-content;
+
+  ul.feedback-content {
+    display: inline-block;
+    width: max-content;
+
+    > li {
+      ${tableListStyle}
+      line-height: 12px;
+      padding: 0 0 8px;
+
+      &:last-child {
+        font-size: 10px;
+      }
+    }
+  }
+`;
+
