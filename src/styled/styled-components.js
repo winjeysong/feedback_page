@@ -136,17 +136,19 @@ export const CustomTable = styled(Table)`
   background: ${primaryColor} !important;
   ${primaryBorderStyle}
 
-
   thead.ant-table-thead {
     border: 1px solid #e9ecef;
 
-    > tr > th span {
-      color: #4a93cf;
-      font-size: 12px;
-      font-family: sans-serif;
-      font-weight: 500;
-      text-align: center !important;
+    > tr > th {
+      text-align: center;
+      padding: 15px 8px;
+
+      span {
+        color: #4a93cf;
+        font-size: 12px;
+        font-family: sans-serif;
+        font-weight: 500;
+      }
     }
   }
-
 `;
