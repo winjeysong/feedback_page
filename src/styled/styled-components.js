@@ -180,6 +180,7 @@ export const CustomTable = styled(Table)`
     
     > tr > td {
       text-align: center;
+      vertical-align: top;
       padding: 15px 8px;
     }
   }
