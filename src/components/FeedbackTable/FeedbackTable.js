@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'dva';
 import { CustomTable } from '../../styled/styled-components';
 import UserInfo from '../../components/UserInfo/UserInfo';
 
@@ -24,6 +23,7 @@ const data = [{
     name: '甜甜',
     tele: '18598886652',
     card: '254152547885',
+    avatar: null,
   },
   tag: '活动反馈',
   feedback: 'content',
@@ -34,6 +34,7 @@ const data = [{
     name: '甜甜',
     tele: '18598886652',
     card: '254152547885',
+    avatar: null,
   },
   tag: '活动反馈',
   feedback: 'content',
