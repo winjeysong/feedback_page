@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Menu, Table } from 'antd';
 import logoimg from '../assets/C510FF9D-0B61-4C68-99FD-89F3657B4EE0@1x.png';
+import avatar from '../assets/9985A4D7-77A3-43D5-AAB5-CBB052689812@1x.png';
 
 // global variables
 const primaryColor = '#fff';
@@ -162,3 +163,50 @@ export const CustomTable = styled(Table)`
     }
   }
 `;
+
+// user wrapper
+const UserWrapStyle = {
+  isAvatar: (props) => { return props.avatar ? props.avatar : avatar; },
+
+  UserWrap() {
+    return styled.div`
+    
+      ul.user-info {
+        display: inline-block;
+        width: max-content;
+    
+        > li {
+          text-align: left;
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    
+      &:before {
+        display: inline-block;
+        content: "";
+        background: #ececec;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        position: relative;
+        top: 3px;
+        left: -12px;
+      }
+    
+      &:after {
+        display: inline-block;
+        content: "";
+        background: url(${this.isAvatar}) no-repeat 50% 50%;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        top: 3px;
+        left: -143px;
+      }
+    `;
+  },
+};
+
+export const UserWrap = UserWrapStyle.UserWrap();
+
