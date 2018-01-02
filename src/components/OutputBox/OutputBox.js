@@ -11,7 +11,7 @@ function OutputBox() {
         <Row>
           <Col span={12} offset={6}>
             <FormItem>
-              <Button type="primary" ghost style={{ fontSize: 12, padding: '0 39px' }}><span>导</span><span>出</span></Button>
+              <Button type="primary" ghost style={{ fontSize: 12, padding: '0 39px', fontWeight: 400 }}><span>导</span><span>出</span></Button>
             </FormItem>
           </Col>
         </Row>

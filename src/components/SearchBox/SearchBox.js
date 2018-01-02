@@ -123,7 +123,7 @@ class DateRange extends React.Component {
             </Col>
             <Col span={2} offset={1}>
               <FormItem>
-                <Button type="primary" htmlType="submit" ghost style={{ fontSize: 12 }}><span>查</span><span>询</span></Button>
+                <Button type="primary" htmlType="submit" ghost style={{ fontSize: 12, fontWeight: 400 }}><span>查</span><span>询</span></Button>
               </FormItem>
             </Col>
           </Row>

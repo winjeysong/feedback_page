@@ -11,7 +11,7 @@ function ConfigBox() {
         <Row>
           <Col span={12} offset={6}>
             <FormItem>
-              <Button type="primary" ghost style={{ fontSize: 12, padding: '0 27px' }}>配置标签</Button>
+              <Button type="primary" ghost style={{ fontSize: 12, padding: '0 27px', fontWeight: 400 }}>配置标签</Button>
             </FormItem>
           </Col>
         </Row>
@@ -20,7 +20,7 @@ function ConfigBox() {
         <Row>
           <Col span={12} offset={6}>
             <FormItem>
-              <Button type="primary" ghost style={{ fontSize: 12 }}>配置快捷回复</Button>
+              <Button type="primary" ghost style={{ fontSize: 12, fontWeight: 400 }}>配置快捷回复</Button>
             </FormItem>
           </Col>
         </Row>
