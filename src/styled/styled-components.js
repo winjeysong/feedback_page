@@ -235,11 +235,12 @@ export const UserWrap = UserWrapStyle.UserWrap();
 // feedback wrapper for UserFeedback
 export const FeedbackWrap = styled.div`
   display: inline-block;
-  width: max-content;
-
+  width: 60%;
+  
   ul.feedback-content {
     display: inline-block;
-    width: max-content;
+    width: 100%;
+    
 
     > li {
       ${tableListStyle}

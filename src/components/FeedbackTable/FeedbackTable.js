@@ -6,17 +6,21 @@ import UserFeedback from '../../components/UserFeedback/UserFeedback';
 const columns = [{
   title: '用户',
   dataIndex: 'user',
+  width: '25%',
   render: info => <UserInfo userInfo={info} />,
 }, {
   title: '反馈内容',
   dataIndex: 'feedback',
+  width: '40%',
   render: fb => <UserFeedback userFeedback={fb} />,
 }, {
   title: '标签',
   dataIndex: 'tag',
+  width: '15%',
 }, {
   title: '操作',
   dataIndex: 'operation',
+  width: '15%',
 }];
 
 const data = [{
