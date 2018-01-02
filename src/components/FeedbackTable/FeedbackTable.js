@@ -2,6 +2,7 @@ import React from 'react';
 import { CustomTable } from '../../styled/styled-components';
 import UserInfo from '../../components/UserInfo/UserInfo';
 import UserFeedback from '../../components/UserFeedback/UserFeedback';
+import ReButton from '../../components/ReButton/ReButton';
 
 const columns = [{
   title: '用户',
@@ -21,6 +22,7 @@ const columns = [{
   title: '操作',
   dataIndex: 'operation',
   width: '15%',
+  render: () => <ReButton />,
 }];
 
 const data = [{
@@ -42,7 +44,6 @@ const data = [{
       reDate: '2017/10/11 8:21:30',
     },
   },
-  operation: 'New York No. 1 Lake Park',
 }, {
   key: '2',
   user: {
@@ -57,7 +58,6 @@ const data = [{
     fbImg: require('../../assets/9FFF55AE-AFC0-498A-B8AC-51A8EBF1974F@1x.png'),
     fbDate: '2017/10/11 8:21:30',
   },
-  operation: 'London No. 1 Lake Park',
 }];
 
 // rowSelection object indicates the need for row selection

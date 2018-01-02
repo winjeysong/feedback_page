@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Menu, Table } from 'antd';
+import { Menu, Table, Button } from 'antd';
 import logoimg from '../assets/C510FF9D-0B61-4C68-99FD-89F3657B4EE0@1x.png';
 import avatar from '../assets/9985A4D7-77A3-43D5-AAB5-CBB052689812@1x.png';
 
@@ -241,7 +241,6 @@ export const FeedbackWrap = styled.div`
     display: inline-block;
     width: 100%;
     
-
     > li {
       ${tableListStyle}
       line-height: 12px;
@@ -263,3 +262,18 @@ export const FeedbackWrap = styled.div`
   }
 `;
 
+// custom style for Button (ReButton)
+export const ReBtn = styled(Button)`
+  color: ${tableColor};
+  border-color: ${tableColor};
+
+  &.ant-btn:hover,
+  &.ant-btn:focus {
+    color: rgba(12,146,255,0.8);
+    border-color: rgba(12,146,255,0.8);
+  }
+
+  &.ant-btn-clicked:after {
+    border: 0 solid ${tableColor};
+  }
+`;
