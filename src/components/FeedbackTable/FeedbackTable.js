@@ -72,7 +72,19 @@ const rowSelection = {
 
 function FeedbackTable() {
   return (
-    <CustomTable rowSelection={rowSelection} columns={columns} dataSource={data} />
+    <CustomTable
+      rowSelection={rowSelection}
+      columns={columns}
+      dataSource={data}
+      pagination={{
+        size: 'small',
+        total: 998,
+        showTotal: total => <span style={{ fontFamily: 'sans-serif', color: '#999999' }}>共<span style={{ color: '#0c92ff' }}>{total}</span>条数据</span>,
+        showSizeChanger: true,
+        pageSizeOptions: ['2', '10', '50'],
+        showQuickJumper: true,
+      }}
+    />
   );
 }
 

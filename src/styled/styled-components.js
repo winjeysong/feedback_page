@@ -184,6 +184,31 @@ export const CustomTable = styled(Table)`
       padding: 15px 8px;
     }
   }
+
+  ul.ant-table-pagination {
+    .ant-pagination-item-active {
+      background-color: ${tableColor};
+      border-color: ${tableColor};
+    }
+
+    .ant-pagination-item:focus,
+    .ant-pagination-item:hover {
+      border-color: ${tableColor};
+
+      a {
+        color: ${tableColor};
+      }
+    }
+
+    .ant-pagination-item-active:focus, .ant-pagination-item-active:hover {
+      background-color: #0ca7fe;
+      border-color: #0ca7fe;
+
+      a {
+        color: ${primaryColor};
+      }
+    }
+  }
 `;
 
 // user wrapper
@@ -238,7 +263,6 @@ export const FeedbackWrap = styled.div`
   width: 60%;
   
   ul.feedback-content {
-    display: inline-block;
     width: 100%;
     
     > li {
@@ -253,7 +277,7 @@ export const FeedbackWrap = styled.div`
 
       &.fb-response {
         color: #ffb600;
-      }
+      } 
 
       &:last-child {
         padding-bottom: 0;
