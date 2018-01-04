@@ -70,22 +70,47 @@ const rowSelection = {
   }),
 };
 
-function FeedbackTable() {
-  return (
-    <CustomTable
-      rowSelection={rowSelection}
-      columns={columns}
-      dataSource={data}
-      pagination={{
-        size: 'small',
-        total: 998,
-        showTotal: total => <span style={{ fontFamily: 'sans-serif', color: '#999999' }}>共<span style={{ color: '#0c92ff' }}>{total}</span>条数据</span>,
-        showSizeChanger: true,
-        pageSizeOptions: ['2', '10', '50'],
-        showQuickJumper: true,
-      }}
-    />
-  );
+class FeedbackTable extends React.Component {
+  state = {
+    current: 1,
+    curPageSize: 2,
+  };
+
+  onChange = (page) => {
+    this.setState({
+      current: page,
+    });
+  }
+
+  onShowSizeChange = (current, size) => {
+    this.setState({
+      current,
+      curPageSize: size,
+    });
+  }
+
+  render() {
+    return (
+      <CustomTable
+        rowSelection={rowSelection}
+        columns={columns}
+        dataSource={data}
+        pagination={{
+          size: 'small',
+          total: 998,
+          current: this.state.current,
+          curPageSize: this.state.curPageSize,
+          showTotal: total => <span style={{ fontFamily: 'sans-serif', color: '#999999', fontWeight: '300' }}>共<span style={{ color: '#0c92ff' }}>{total}</span>条数据</span>,
+          showSizeChanger: true,
+          pageSizeOptions: ['2', '10', '50'],
+          defaultPageSize: 2,
+          showQuickJumper: true,
+          onChange: this.onChange,
+          onShowSizeChange: this.onShowSizeChange,
+        }}
+      />
+    );
+  }
 }
 
 export default FeedbackTable;

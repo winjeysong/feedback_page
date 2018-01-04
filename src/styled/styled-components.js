@@ -142,74 +142,141 @@ export const CustomMenu = styled(Menu)`
 `;
 
 // custom table for FeedbackTable
-export const CustomTable = styled(Table)`
-  background: ${primaryColor} !important;
-  ${primaryBorderStyle}
+const CustomTableStyle = {
+  adjustFirstPage: (props) => {
+    const current = props.pagination.current;
+    return current >= 4 ? 'none' : 'inline-block';
+  },
 
-  .ant-checkbox-wrapper:hover .ant-checkbox-inner,
-  .ant-checkbox:hover .ant-checkbox-inner,
-  .ant-checkbox-input:focus + .ant-checkbox-inner {
-    border-color: ${tableColor};
-  }
+  adjustLastPage: (props) => {
+    const { total, curPageSize, current } = props.pagination;
+    return current <= Math.ceil(total / curPageSize) - 3 ? 'none' : 'inline-block';
+  },
 
-  .ant-checkbox-checked .ant-checkbox-inner,
-  .ant-checkbox-indeterminate .ant-checkbox-inner {
-    background-color: ${tableColor};
-    border-color: ${tableColor};
-  }
-
-  thead.ant-table-thead {
-    border: 1px solid #e9ecef;
-
-    > tr > th {
-      text-align: center;
-      padding: 15px 8px;
-
-      span {
-        color: #4a93cf;
-        font-size: ${defaultFontSize};
-        font-family: sans-serif;
-        font-weight: 500;
-      }
+  CustomTable() {
+    return styled(Table)`
+    background: ${primaryColor} !important;
+    ${primaryBorderStyle}
+  
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+    .ant-checkbox:hover .ant-checkbox-inner,
+    .ant-checkbox-input:focus + .ant-checkbox-inner {
+      border-color: ${tableColor};
     }
-  }
-
-  tbody.ant-table-tbody {
-    color: #083050;
-    font-family: sans-serif;
-    
-    > tr > td {
-      text-align: center;
-      vertical-align: top;
-      padding: 15px 8px;
-    }
-  }
-
-  ul.ant-table-pagination {
-    .ant-pagination-item-active {
+  
+    .ant-checkbox-checked .ant-checkbox-inner,
+    .ant-checkbox-indeterminate .ant-checkbox-inner {
       background-color: ${tableColor};
       border-color: ${tableColor};
     }
-
-    .ant-pagination-item:focus,
-    .ant-pagination-item:hover {
-      border-color: ${tableColor};
-
-      a {
-        color: ${tableColor};
+  
+    thead.ant-table-thead {
+      border: 1px solid #e9ecef;
+  
+      > tr > th {
+        text-align: center;
+        padding: 15px 8px;
+  
+        span {
+          color: #4a93cf;
+          font-size: ${defaultFontSize};
+          font-family: sans-serif;
+          font-weight: 500;
+        }
       }
     }
-
-    .ant-pagination-item-active:focus, .ant-pagination-item-active:hover {
-      background-color: #0ca7fe;
-      border-color: #0ca7fe;
-
-      a {
-        color: ${primaryColor};
+  
+    tbody.ant-table-tbody {
+      color: #083050;
+      font-family: sans-serif;
+      
+      > tr > td {
+        text-align: center;
+        vertical-align: top;
+        padding: 15px 8px;
       }
     }
-  }
-`;
+  
+    ul.ant-table-pagination {
+      display: block;
+      width: 100%;
+      margin: 100px auto 18px;
+      
+      > li {
+        &.ant-pagination-item-active {
+          background-color: ${tableColor};
+          border-color: ${tableColor};
+        }
+  
+        &.ant-pagination-item:focus,
+        &.ant-pagination-item:hover {
+          border-color: ${tableColor};
+  
+          a {
+            color: ${tableColor};
+          }
+        }
+  
+        &.ant-pagination-item-active:focus,
+        &.ant-pagination-item-active:hover {
+          background-color: #0ca7fe;
+          border-color: #0ca7fe;
+  
+          a {
+            color: ${primaryColor};
+          }
+        }
+  
+        &.ant-pagination-total-text {
+          margin: 0 0 0 36px;
+          width: 30%;
+        }
+  
+        &.ant-pagination-prev,
+        &.ant-pagination-next {
+          a.ant-pagination-item-link {
+            color: rgba(0,0,0,0.65);
+            &:after {
+              font-size: 16px;
+            }
+  
+            &:hover,
+            &:focus {
+              color: ${tableColor};
+            }
+          }
+        }
+  
+        &.ant-pagination-disabled {
+          a.ant-pagination-item-link {
+            color: rgba(0,0,0,0.25);
+  
+            &:hover,
+            &:focus {
+              color: rgba(0,0,0,0.25);
+            }
+          }
+        }
+  
+        &.ant-pagination-jump-prev,
+        &.ant-pagination-jump-next {
+          display: none;
+        }
+
+        &.ant-pagination-item-1 {
+          display: ${this.adjustFirstPage};
+        }
+  
+        &:nth-last-child(3) {
+          display: ${this.adjustLastPage};
+        }
+      }
+    }
+  `;
+  },
+};
+
+export const CustomTable = CustomTableStyle.CustomTable();
 
 // user wrapper
 const UserWrapStyle = {
@@ -259,12 +326,10 @@ export const UserWrap = UserWrapStyle.UserWrap();
 
 // feedback wrapper for UserFeedback
 export const FeedbackWrap = styled.div`
-  display: inline-block;
-  width: 60%;
+  width: 295px;
+  margin: 0 auto;
   
   ul.feedback-content {
-    width: 100%;
-    
     > li {
       ${tableListStyle}
       line-height: 12px;
