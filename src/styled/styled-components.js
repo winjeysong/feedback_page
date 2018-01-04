@@ -169,6 +169,10 @@ const CustomTableStyle = {
       background-color: ${tableColor};
       border-color: ${tableColor};
     }
+
+    .ant-checkbox-checked:after {
+      border-color: ${tableColor};
+    }
   
     thead.ant-table-thead {
       border: 1px solid #e9ecef;
