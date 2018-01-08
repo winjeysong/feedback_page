@@ -274,6 +274,30 @@ const CustomTableStyle = {
         &:nth-last-child(3) {
           display: ${this.adjustLastPage};
         }
+
+        &.ant-pagination-options {
+          .ant-select .ant-select-selection,
+          .ant-pagination-options-quick-jumper input {
+            &:hover {
+              border-color: #0ca7fe;
+            }
+
+            &:focus,
+            &:active {
+              border-color: #0ca7fe;
+              box-shadow: 0 0 0 2px rgba(12,167,254,0.2);
+            }
+          }
+
+          .ant-select-selection .ant-select-arrow:before {
+            content: '\\e61d';
+          }
+        }
+      }
+
+      .ant-select-dropdown-menu-item:hover,
+      .ant-select-dropdown-menu-item-active {
+        background-color: rgba(12,167,254,0.2);
       }
     }
   `;
