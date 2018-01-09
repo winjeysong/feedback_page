@@ -1,12 +1,11 @@
 import React from 'react';
 import { connect } from 'dva';
-import styles from './TopItem4.css';
+import MainLayout from '../components/MainLayout/MainLayout';
 
-function TopItem4() {
+function TopItem4({ location }) {
+  const content = <h1>商场管理页面</h1>;
   return (
-    <div className={styles.normal}>
-      商场管理
-    </div>
+    <MainLayout location={location} content={content} />
   );
 }
 
