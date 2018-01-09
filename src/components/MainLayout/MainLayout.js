@@ -17,13 +17,13 @@ function MainLayout({ location, tip, content }) {
     </Sider>
   );
   const contentSwitch = location.pathname === '/' ? (
-    <Content style={{ padding: 24, margin: 0, minHeight: 280 }}>
+    <Content style={{ padding: 0, margin: 0, minHeight: 280 }}>
       <h1>这是主页</h1>
     </Content>
   ) : (
     <div>
       <ContentTip>{tip}</ContentTip>
-      <Content style={{ padding: 24, margin: 0, minHeight: 280 }}>
+      <Content style={{ padding: 0, margin: 0, minHeight: 280 }}>
         {content}
       </Content>
     </div>
