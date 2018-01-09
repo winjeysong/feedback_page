@@ -37,23 +37,31 @@ const TopItemStyle = {
   topItemWidth: '80px',
   topItemHeight: '70px',
   topItemPrimaryColor: primaryColor,
+  isSelected: (props) => {
+    const deRootPath = decodeURIComponent(location.href.replace(location.origin, ''));
+    const re = /(\/#)(\/.+)/;
+    const curPathname = deRootPath.replace(re, '$2').substr(0, 5);
+    return props.myLocation === curPathname ? `background: ${primaryColor}; color: ${highlightColor};` : `background: transparent; color: ${primaryColor};`;
+  },
 
   TopWrap() {
     return styled.div`
       width: ${this.topItemWidth};
       height: ${this.topItemHeight};
-      transition: background .3s ease-out;
-      &:hover {
-        background: ${this.topItemPrimaryColor};
-      }
-
+      
       a {
         display: inline-block;
         width: ${this.topItemWidth};
         height: ${this.topItemHeight};
         padding: 15px 0;
-        transition: color .3s ease-out;
-        &:hover > span {
+        ${this.isSelected}
+        transition: color,background .3s ease-out;
+        &:hover,
+        &:focus {
+          background: ${this.topItemPrimaryColor};
+        }
+        &:hover > span,
+        &:focus > span {
           color: ${highlightColor};
         }
       }
@@ -67,7 +75,6 @@ const TopItemStyle = {
       position: absolute;
       top: 40px;
       left: 32px;
-      color: ${this.topItemPrimaryColor};
       opacity: 0.8;
       font-size: ${middleFontSize};
       line-height: 14px;

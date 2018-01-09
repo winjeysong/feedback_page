@@ -6,7 +6,7 @@ import { TopItemStyles } from '../../styled/styled-components';
 const { TopWrap, InfoWrap } = TopItemStyles;
 const TopItem = ({ path, iconPath, info }) => {
   return (
-    <TopWrap>
+    <TopWrap myLocation={path}>
       <Link to={path}>
         <img src={iconPath} alt={info} />
         <InfoWrap>{info}</InfoWrap>
