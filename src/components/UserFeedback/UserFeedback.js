@@ -9,7 +9,7 @@ function UserFeedback({ userFeedback }) {
     const dateFormat = dateParse.toLocaleString('cn', { hour12: false }).replace(re, '$1-$2-$3');
     return dateFormat;
   };
-  const merchantRe = fbRe ? <li className="fb-response">{`[商家回复] ${fbRe.reMsg}`}</li> : null;
+  const merchantRe = fbRe ? <li className="fb-response fb-response-content">{`[商家回复] ${fbRe.reMsg}`}</li> : null;
   const reStaffDate = fbRe ? <li className="fb-response fb-re-staff-date">{`[${fbRe.reStaff}] ${transDate(fbRe.reDate)}`}</li> : null;
 
   return (

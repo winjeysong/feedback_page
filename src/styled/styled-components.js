@@ -377,7 +377,11 @@ export const FeedbackWrap = styled.div`
 
       &.fb-response {
         color: #ffb600;
-      } 
+      }
+
+      &.fb-response-content {
+        line-height: 16px;
+      }
 
       &:last-child {
         padding-bottom: 0;
