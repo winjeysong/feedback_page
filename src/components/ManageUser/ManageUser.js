@@ -7,8 +7,8 @@ function ManageUser() {
   return (
     <TopUserWrap>
       <Avatar src={img} />
-      <span className="top-user-name">周兴</span>
-      <span className="top-logout">退出</span>
+      <span className="manage-user top-user-name">周兴</span>
+      <span className="manage-user top-logout">退出</span>
     </TopUserWrap>
   );
 }
