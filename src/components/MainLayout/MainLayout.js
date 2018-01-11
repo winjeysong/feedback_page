@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import TopMenuComponent from '../TopMenu/TopMenu';
 import LeftNavComponent from '../LeftNav/LeftNav';
 import PageLogo from '../PageLogo/PageLogo';
+import ManageUser from '../ManageUser/ManageUser';
 // import DataRange from '../components/DateRange/DateRange';
 import { ContentTip } from '../../styled/styled-components';
 import '../../styled/menu.less';
@@ -34,6 +35,7 @@ function MainLayout({ location, tip, content }) {
       <Header className="header" style={{ height: 70, width: '100%', background: '#182a3a' }}>
         <PageLogo />
         <TopMenuComponent location={location} />
+        <ManageUser />
       </Header>
       <Layout>
         {hasLeftNav}

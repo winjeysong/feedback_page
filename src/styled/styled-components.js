@@ -401,3 +401,34 @@ export const ReBtn = styled(Button)`
     border: 0 solid ${tableColor};
   }
 `;
+
+// wrapper for ManageUser
+export const TopUserWrap = styled.div`
+  font-size: 14px;
+  line-height: 14px;
+  position: absolute;
+  top: 19px;
+  left: 90%;
+
+  > span {
+    color: ${primaryColor};
+    font-family: sans-serif;
+
+    &.top-user-name {
+      display: inline-block;
+      width: max-content;
+      position: inherit;
+      top: 9px;
+      left: 36px;
+      opacity: 0.8;
+    }
+
+    &.top-logout {
+      display: inline-block;
+      width: max-content;
+      position: inherit;
+      top: 9px;
+      left: 80px;
+    }
+  }
+`;
