@@ -62,6 +62,10 @@ const data = [{
 }];
 
 function FeedbackTable({ current: cur, curPageSize: curPS, dispatch }) {
+  const rowSelection = {
+    type: 'checkbox',
+  };
+
   function onChange(page) {
     dispatch({
       type: 'feedbackData/change',
@@ -78,6 +82,7 @@ function FeedbackTable({ current: cur, curPageSize: curPS, dispatch }) {
 
   return (
     <CustomTable
+      rowSelection={rowSelection}
       columns={columns}
       dataSource={data}
       pagination={{
