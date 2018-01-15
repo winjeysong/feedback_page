@@ -4,13 +4,12 @@ import './index.css';
 // 1. Initialize
 const app = dva();
 
-app.model(require("./models/TopItem"));
-
 // 2. Plugins
 // app.use({});
 
 // 3. Model
 // app.model(require('./models/example'));
+app.model(require('./models/feedbackData'));
 
 // 4. Router
 app.router(require('./router'));

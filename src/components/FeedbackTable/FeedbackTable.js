@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'dva';
 import { CustomTable } from '../../styled/styled-components';
 import UserInfo from '../../components/UserInfo/UserInfo';
 import UserFeedback from '../../components/UserFeedback/UserFeedback';
@@ -60,57 +61,46 @@ const data = [{
   },
 }];
 
-// rowSelection object indicates the need for row selection
-const rowSelection = {
-  onChange: (selectedRowKeys, selectedRows) => {
-    console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
-  },
-  getCheckboxProps: record => ({
-    disabled: record.name === 'Disabled User', // Column configuration not to be checked
-  }),
-};
-
-class FeedbackTable extends React.Component {
-  state = {
-    current: 1,
-    curPageSize: 2,
-  };
-
-  onChange = (page) => {
-    this.setState({
-      current: page,
+function FeedbackTable({ current: cur, curPageSize: curPS, dispatch }) {
+  function onChange(page) {
+    dispatch({
+      type: 'feedbackData/change',
+      payload: page,
     });
   }
 
-  onShowSizeChange = (current, size) => {
-    this.setState({
-      current,
-      curPageSize: size,
+  function onShowSizeChange(current, size) {
+    dispatch({
+      type: 'feedbackData/showSizeChange',
+      payload: { current, size },
     });
   }
 
-  render() {
-    return (
-      <CustomTable
-        rowSelection={rowSelection}
-        columns={columns}
-        dataSource={data}
-        pagination={{
-          size: 'small',
-          total: 998,
-          current: this.state.current,
-          curPageSize: this.state.curPageSize,
-          showTotal: total => <span style={{ fontFamily: 'sans-serif', color: '#999999', fontWeight: '300' }}>共<span style={{ color: '#0c92ff' }}>{total}</span>条数据</span>,
-          showSizeChanger: true,
-          pageSizeOptions: ['2', '10', '50'],
-          defaultPageSize: 2,
-          showQuickJumper: true,
-          onChange: this.onChange,
-          onShowSizeChange: this.onShowSizeChange,
-        }}
-      />
-    );
-  }
+  return (
+    <CustomTable
+      columns={columns}
+      dataSource={data}
+      pagination={{
+        size: 'small',
+        total: 998,
+        current: cur,
+        curPageSize: curPS,
+        showTotal: total => <span style={{ fontFamily: 'sans-serif', color: '#999999', fontWeight: '300' }}>共<span style={{ color: '#0c92ff' }}>{total}</span>条数据</span>,
+        showSizeChanger: true,
+        pageSizeOptions: ['2', '10', '50'],
+        defaultPageSize: 2,
+        showQuickJumper: true,
+        onChange,
+        onShowSizeChange,
+      }}
+    />
+  );
 }
 
-export default FeedbackTable;
+function mapStateToProps(state) {
+  const { current, curPageSize } = state.feedbackData;
+  return { current, curPageSize };
+}
+
+export default connect(mapStateToProps)(FeedbackTable);
+
