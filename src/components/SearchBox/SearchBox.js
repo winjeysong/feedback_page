@@ -61,7 +61,7 @@ class DateRange extends React.Component {
                 required={false}
               >
                 {getFieldDecorator('start-date', dateConfig)(
-                  <DatePicker placeholder="开始时间" style={{ display: 'inline-block', width: '100%' }} />
+                  <DatePicker placeholder="开始时间" style={{ display: 'inline-block', width: '100%' }} />,
                 )}
               </FormItem>
             </Col>
@@ -74,7 +74,7 @@ class DateRange extends React.Component {
                 required={false}
               >
                 {getFieldDecorator('end-date', dateConfig)(
-                  <DatePicker placeholder="结束时间" style={{ display: 'inline-block', width: '100%' }} />
+                  <DatePicker placeholder="结束时间" style={{ display: 'inline-block', width: '100%' }} />,
                 )}
               </FormItem>
             </Col>
@@ -87,7 +87,7 @@ class DateRange extends React.Component {
                 hasFeedback
               >
                 {getFieldDecorator('user-info', userConfig)(
-                  <Input placeholder="昵称/手机号/卡号" />
+                  <Input placeholder="昵称/手机号/卡号" />,
                 )}
               </FormItem>
             </Col>
@@ -103,7 +103,7 @@ class DateRange extends React.Component {
                 {getFieldDecorator('tag-select', tagConfig)(
                   <Select placeholder="请选择">
                     <Option value="全部">全部</Option>
-                  </Select>
+                  </Select>,
                 )}
               </FormItem>
             </Col>
@@ -117,7 +117,7 @@ class DateRange extends React.Component {
                 {getFieldDecorator('has-responded', resConfig)(
                   <Select placeholder="请选择">
                     <Option value="全部">全部</Option>
-                  </Select>
+                  </Select>,
                 )}
               </FormItem>
             </Col>
