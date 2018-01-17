@@ -38,7 +38,9 @@ const TopItemStyle = {
   topItemHeight: '70px',
   topItemPrimaryColor: primaryColor,
   isSelected: (props) => {
-    const deRootPath = decodeURIComponent(location.href.replace(location.origin, ''));
+    const deRootPathOthers = decodeURIComponent(location.href.replace(location.origin, ''));
+    const deRootPathOldIE = decodeURIComponent(location.href.replace(location.protocol+'//','').replace(location.host,''));
+    const deRootPath = navigator.userAgent.indexOf('Trident') > -1 ? deRootPathOldIE : deRootPathOthers;
     const re = /(\/#)(\/.+)/;
     const curPathname = deRootPath.replace(re, '$2').substr(0, 5);
     return props.myLocation === curPathname ? `background: ${primaryColor}; color: ${highlightColor};` : `background: transparent; color: ${primaryColor};`;
