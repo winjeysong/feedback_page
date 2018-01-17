@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+import 'babel-preset-es2015-ie';
 import dva from 'dva';
 import './index.css';
 

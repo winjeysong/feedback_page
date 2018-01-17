@@ -71,7 +71,7 @@ const TopItemStyle = {
   InfoWrap() {
     return styled.span`
       display: block;
-      width: max-content;
+      width: 56px;
       position: absolute;
       top: 40px;
       left: 32px;
@@ -101,8 +101,8 @@ export const Logo = styled.span`
 
   span {
     display: inline-block;
-    width: max-content;
-    padding-left: 10px;
+    width: 72px;
+    margin-left: 10px;
     position: absolute;
     top: 4px;
   }
@@ -320,11 +320,11 @@ const UserWrapStyle = {
   UserWrap() {
     return styled.div`
       display: inline-block;
-      width: max-content;
+      width: 100%;
 
       ul.user-info {
         display: inline-block;
-        width: max-content;
+        width: 130px;
     
         > li {
           ${tableListStyle}
@@ -351,7 +351,7 @@ const UserWrapStyle = {
         height: 50px;
         position: relative;
         top: 3px;
-        left: -187px;
+        left: -192px;
       }
     `;
   },
@@ -420,7 +420,7 @@ export const TopUserWrap = styled.div`
 
     &.manage-user {
       display: inline-block;
-      width: max-content;
+      width: 28px;
       position: inherit;
     }
 
