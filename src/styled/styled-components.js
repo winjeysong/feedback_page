@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Menu, Table, Button } from 'antd';
 import logoimg from '../assets/C510FF9D-0B61-4C68-99FD-89F3657B4EE0@1x.png';
-import avatar from '../assets/9985A4D7-77A3-43D5-AAB5-CBB052689812@1x.png';
 
 // global variables
 const primaryColor = '#fff';
@@ -39,7 +38,7 @@ const TopItemStyle = {
   topItemPrimaryColor: primaryColor,
   isSelected: (props) => {
     const deRootPathOthers = decodeURIComponent(location.href.replace(location.origin, ''));
-    const deRootPathOldIE = decodeURIComponent(location.href.replace(location.protocol+'//','').replace(location.host,''));
+    const deRootPathOldIE = decodeURIComponent(location.href.replace(`${location.protocol}//`, '').replace(location.host, ''));
     const deRootPath = navigator.userAgent.indexOf('Trident') > -1 ? deRootPathOldIE : deRootPathOthers;
     const re = /(\/#)(\/.+)/;
     const curPathname = deRootPath.replace(re, '$2').substr(0, 5);
@@ -317,43 +316,32 @@ export const CustomTable = CustomTableStyle.CustomTable();
 
 // user wrapper
 const UserWrapStyle = {
-  isAvatar: (props) => { return props.avatar ? props.avatar : avatar; },
-
   UserWrap() {
     return styled.div`
       display: inline-block;
       width: 100%;
 
-      ul.user-info {
-        display: inline-block;
-        width: 130px;
-    
-        > li {
-          ${tableListStyle}
+      .ant-avatar {
+        position: relative;
+        left: -12px;
+        top: 2.5px;
+
+        > img {
+          width: 25px;
+          height: 28px;
+          position: absolute;
+          left: 12.5px;
+          top: 11px;
         }
       }
-    
-      &:before {
+
+      ul.user-info {
         display: inline-block;
-        content: "";
-        background: #ececec;
-        width: 50px;
-        height: 50px;
-        border-radius: 100%;
-        position: relative;
-        top: 3px;
-        left: -12px;
-      }
     
-      &:after {
-        display: inline-block;
-        content: "";
-        background: url(${this.isAvatar}) no-repeat 50% 50%;
-        width: 50px;
-        height: 50px;
-        position: relative;
-        top: 3px;
-        left: -192px;
+        > li {
+          min-width: 125px;
+          ${tableListStyle}
+        }
       }
     `;
   },
