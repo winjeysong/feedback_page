@@ -339,7 +339,7 @@ const UserWrapStyle = {
         display: inline-block;
     
         > li {
-          min-width: 125px;
+          min-width: 126px;
           ${tableListStyle}
         }
       }
